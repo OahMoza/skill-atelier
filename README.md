@@ -41,6 +41,10 @@ skill-atelier/
     └── atelier-deprecate/
 ```
 
+## 原型图
+
+想 30 秒看懂这个 skill 怎么运转，打开 [交互式产品原型](docs/skill-atelier-prototype.html)：六阶段生命周期管道（点击查看每阶段用什么子技能/工具、产出什么）+ 包解剖 + 命令台 + 八条原则。
+
 ## 快速开始
 
 ```bash
