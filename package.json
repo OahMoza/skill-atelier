@@ -1,0 +1,26 @@
+{
+  "name": "skill-atelier",
+  "version": "0.1.0",
+  "description": "个人元技能制造与治理系统（Skill Atelier · 匠心技能工坊）：围绕真实任务与使用反馈，持续发现、设计、制造、验证、维护、退役 Agent Skills。",
+  "license": "Apache-2.0",
+  "keywords": ["agent-skills", "meta-skill", "skills", "claude-skills", "ai-agents"],
+  "bin": {
+    "atelier": "./bin/atelier.js"
+  },
+  "files": [
+    "bin",
+    "scripts",
+    "references",
+    "assets",
+    "skills",
+    "SKILL.md",
+    "profile.yml",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node bin/atelier.js --version"
+  }
+}

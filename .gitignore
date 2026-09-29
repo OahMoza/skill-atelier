@@ -1,0 +1,14 @@
+# 依赖与缓存
+node_modules/
+*.tgz
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 草稿（个人本地产物，不进仓库）
+drafts/

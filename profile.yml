@@ -1,0 +1,31 @@
+# Skill Atelier 个人配置
+# 优先读取 ~/.skill-atelier/profile.yml；不存在时读本文件。
+# 修改后会影响 atelier-build / atelier-design 生成的技能形态。
+
+language: zh-CN
+output_style: concise
+
+risk_tolerance: low
+require_confirmation_for:
+  - file deletion
+  - git push
+  - cloud deployment
+  - database write
+
+preferred_tools:
+  document: docx, pdf
+  spreadsheet: xlsx
+  presentation: pptx
+
+directories:
+  # 技能安装目录：生成/构建后的技能放这里
+  # 豆包工作区示例：C:\Users\<user>\AppData\Local\Doubao\User Data\Profile 2\.doubao\agent_mode\workspace\.user_skills
+  skills: ~/.agents/skills
+  # 草稿目录：设计文档、候选评估报告
+  drafts: ~/workspace/skill-atelier/drafts
+
+# 生成技能时的默认约定
+defaults:
+  template_language: zh-CN
+  include_validation_checklist: true
+  version_on_create: true

@@ -1,0 +1,27 @@
+# Skill Atelier 个人配置模板
+# 复制到 ~/.skill-atelier/profile.yml 后按需修改。
+# 优先读取 ~/.skill-atelier/profile.yml；不存在时读技能库根目录的 profile.yml。
+
+language: zh-CN
+output_style: concise
+
+risk_tolerance: low
+require_confirmation_for:
+  - file deletion
+  - git push
+  - cloud deployment
+  - database write
+
+preferred_tools:
+  document: docx, pdf
+  spreadsheet: xlsx
+  presentation: pptx
+
+directories:
+  skills: ~/.agents/skills
+  drafts: ~/workspace/skill-atelier/drafts
+
+defaults:
+  template_language: zh-CN
+  include_validation_checklist: true
+  version_on_create: true
