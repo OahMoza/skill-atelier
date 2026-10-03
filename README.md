@@ -12,6 +12,7 @@ skill-atelier/
 ├── profile.yml                     # 个人配置：语言/风格/风险偏好/目录（可改）
 ├── README.md                       # 本文件
 ├── CHANGELOG.md                    # 版本变更记录
+├── docs/                           # 可视化：交互式产品原型 + 整体使用（日报风）页面
 ├── references/                     # 只读参考（规范快照、方法论、反模式）
 │   ├── agentskills-spec.md         #   官方规范快照（commit 69ef37e, 2026-09-29）
 │   ├── skill-design-principles.md
@@ -41,9 +42,13 @@ skill-atelier/
     └── atelier-deprecate/
 ```
 
-## 原型图
+## 原型与可视化
 
 想 30 秒看懂这个 skill 怎么运转，打开 [交互式产品原型](docs/skill-atelier-prototype.html)：六阶段生命周期管道（点击查看每阶段用什么子技能/工具、产出什么）+ 包解剖 + 命令台 + 八条原则。
+
+想从"整体怎么用"的角度看，打开 [整体使用 · 工坊日报](docs/skill-atelier-usage.html)：日报风三栏版面——本刊目录（六阶段可点击切换）、本期版面（阶段详情 / 闭环 / 真实走查 herdr 案例）、命令服务栏（/atelier 与 npx CLI），一页讲清整座技能库怎么运转。
+
+![整体使用 · 工坊日报](docs/skill-atelier-usage.png)
 
 ## 快速开始
 

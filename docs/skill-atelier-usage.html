@@ -1,0 +1,150 @@
+<!--
+assumptions: 用户在 A2（A 的交互+内容、青碧主题）基础上要求改风格；风格=日报风（浅色纸感+报刊刊头+栏题版式，
+贴合用户日常工作日报习惯）；交互与内容与 A2 完全一致；数据取自 skill-atelier v0.1.0 真实状态；无第三方品牌 logo。
+-->
+<html style="margin:0;padding:0;">
+<title>Skill Atelier 整体使用 · 方案A3 工坊日报</title>
+<div style="width:100%;box-sizing:border-box;background:#f7f4ee;color:#26221c;font-family:-apple-system,'Segoe UI','Microsoft YaHei',sans-serif;">
+
+  <!-- 刊头 -->
+  <div style="background:#fffdf9;border-bottom:3px double #26221c;padding:18px 24px 12px;">
+    <div style="max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;">
+      <span style="font-family:Georgia,'Songti SC',serif;font-size:26px;font-weight:700;color:#26221c;letter-spacing:1px;">技能工坊 · 日报</span>
+      <span style="font-size:14px;color:#2e7d6b;font-weight:700;letter-spacing:1px;">SKILL ATELIER</span>
+      <span style="margin-left:auto;font-size:13px;color:#6f675a;">2026-10-03 · 总第 001 期 · v0.1.0</span>
+    </div>
+    <div style="max-width:1120px;margin:10px auto 0;border-top:1px solid #26221c;padding-top:6px;font-size:13px;color:#6f675a;">
+      今日要闻：技能库 91 项 · 子技能 6 · 脚本 5 · 查重 0 重叠 · 校验 0 error —— 它管的是你的整座技能库，不是一份 SKILL.md。
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;max-width:1120px;margin:0 auto;padding:16px 24px 8px;">
+
+    <!-- 左栏：六阶段目录 -->
+    <div style="flex:0 0 220px;box-sizing:border-box;background:#fffdf9;border:1px solid #d8d0c2;border-radius:8px;padding:14px 12px;margin-bottom:16px;">
+      <div style="font-size:12px;color:#26221c;font-weight:700;letter-spacing:2px;border-bottom:1px solid #d8d0c2;padding-bottom:6px;margin-bottom:10px;">本刊目录 · 六阶段</div>
+      <div id="stages">
+        <div id="st-1" data-k="discover" style="border-left:4px solid #2e7d6b;background:#e9f1ee;border-radius:4px;padding:9px 10px;margin-bottom:7px;cursor:pointer;">
+          <div style="font-size:14px;font-weight:700;">1 · 发现</div>
+          <div style="font-size:12px;color:#6f675a;margin-top:2px;">从记录识别候选能力</div>
+        </div>
+        <div id="st-2" data-k="design" style="border-left:4px solid #d8d0c2;background:#fff;border-radius:4px;padding:9px 10px;margin-bottom:7px;cursor:pointer;">
+          <div style="font-size:14px;font-weight:700;">2 · 设计</div>
+          <div style="font-size:12px;color:#6f675a;margin-top:2px;">定边界与验收，不建文件</div>
+        </div>
+        <div id="st-3" data-k="build" style="border-left:4px solid #d8d0c2;background:#fff;border-radius:4px;padding:9px 10px;margin-bottom:7px;cursor:pointer;">
+          <div style="font-size:14px;font-weight:700;">3 · 制造</div>
+          <div style="font-size:12px;color:#6f675a;margin-top:2px;">生成可运行技能产物</div>
+        </div>
+        <div id="st-4" data-k="validate" style="border-left:4px solid #d8d0c2;background:#fff;border-radius:4px;padding:9px 10px;margin-bottom:7px;cursor:pointer;">
+          <div style="font-size:14px;font-weight:700;">4 · 验证</div>
+          <div style="font-size:12px;color:#6f675a;margin-top:2px;">合规、引用、安全把关</div>
+        </div>
+        <div id="st-5" data-k="maintain" style="border-left:4px solid #d8d0c2;background:#fff;border-radius:4px;padding:9px 10px;margin-bottom:7px;cursor:pointer;">
+          <div style="font-size:14px;font-weight:700;">5 · 维护</div>
+          <div style="font-size:12px;color:#6f675a;margin-top:2px;">用反馈迭代、升级版本</div>
+        </div>
+        <div id="st-6" data-k="deprecate" style="border-left:4px solid #d8d0c2;background:#fff;border-radius:4px;padding:9px 10px;margin-bottom:7px;cursor:pointer;">
+          <div style="font-size:14px;font-weight:700;">6 · 退役</div>
+          <div style="font-size:12px;color:#6f675a;margin-top:2px;">合并或安全淘汰弱技能</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:#6f675a;line-height:1.8;border-top:1px solid #d8d0c2;padding-top:8px;">点击任一阶段，中栏显示：做什么 / 用哪个子技能 / 用什么工具 / 产出什么。</div>
+    </div>
+
+    <!-- 中栏：本期版面 -->
+    <div style="flex:1 1 400px;box-sizing:border-box;padding:0 16px;min-width:280px;">
+      <div style="background:#fffdf9;border:1px solid #d8d0c2;border-radius:8px;padding:16px 18px;margin-bottom:16px;">
+        <div id="d-title" style="font-size:20px;font-weight:700;color:#2e7d6b;">1 · 发现</div>
+        <div id="d-do" style="font-size:14px;line-height:1.9;margin-top:10px;color:#26221c;"></div>
+        <div id="d-sub" style="font-size:13px;margin-top:8px;color:#3d3a33;"></div>
+        <div id="d-tools" style="font-size:13px;margin-top:6px;color:#6f675a;"></div>
+        <div id="d-out" style="font-size:13px;margin-top:6px;color:#2e7d6b;font-weight:700;"></div>
+      </div>
+      <div style="background:#fffdf9;border:1px solid #d8d0c2;border-radius:8px;padding:14px 18px;margin-bottom:16px;">
+        <div style="font-size:12px;color:#26221c;font-weight:700;letter-spacing:2px;border-bottom:1px solid #d8d0c2;padding-bottom:6px;margin-bottom:10px;">闭环 · 一条流水线</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:#26221c;align-items:center;">
+          <span>发现</span><span style="color:#2e7d6b;">→</span><span>设计</span><span style="color:#2e7d6b;">→</span><span>制造</span><span style="color:#2e7d6b;">→</span><span>验证</span><span style="color:#2e7d6b;">→</span><span>维护</span><span style="color:#2e7d6b;">→</span><span>退役</span><span style="color:#6f675a;margin-left:8px;">（退役后新候选回到发现，闭环运转）</span>
+        </div>
+      </div>
+      <div style="background:#fffdf9;border:1px solid #d8d0c2;border-radius:8px;padding:14px 18px;margin-bottom:16px;">
+        <div style="font-size:12px;color:#26221c;font-weight:700;letter-spacing:2px;border-bottom:1px solid #d8d0c2;padding-bottom:6px;margin-bottom:10px;">真实走查 · herdr 案例（2026-10-02）</div>
+        <div style="font-size:13px;line-height:1.9;color:#3d3a33;">
+          `herdr --skill` 输出 → 发现报告（建议新建，查重 0 重叠）→ 设计文档（边界/契约/验收）→ 制造（官方正文逐字保留 + 中文触发）→ 校验 0 error → 安装三处（豆包库 / 通用目录 / Codex 技能目录）。
+        </div>
+      </div>
+    </div>
+
+    <!-- 右栏：命令服务栏 -->
+    <div style="flex:0 0 280px;box-sizing:border-box;background:#fffdf9;border:1px solid #d8d0c2;border-radius:8px;padding:14px 14px;">
+      <div style="font-size:12px;color:#26221c;font-weight:700;letter-spacing:2px;border-bottom:1px solid #d8d0c2;padding-bottom:6px;margin-bottom:10px;">命令台 · /atelier</div>
+      <div style="font-size:13px;line-height:2.1;color:#26221c;">
+        <div>/atelier discover —— 发现候选</div>
+        <div>/atelier design &lt;目标&gt; —— 设计，不建文件</div>
+        <div>/atelier build &lt;目标&gt; —— 制造可运行技能</div>
+        <div>/atelier validate &lt;路径&gt; —— 校验合规安全</div>
+        <div>/atelier improve &lt;路径&gt; —— 按反馈迭代</div>
+        <div>/atelier deprecate &lt;路径&gt; —— 判定并退役</div>
+        <div>/atelier audit —— 全库审计</div>
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:#26221c;font-weight:700;letter-spacing:2px;border-bottom:1px solid #d8d0c2;padding-bottom:6px;margin-bottom:10px;">命令台 · npx CLI（人/脚本）</div>
+      <div style="font-size:13px;line-height:2.1;color:#26221c;">
+        <div>build —— 生成骨架</div>
+        <div>validate —— 校验技能</div>
+        <div>audit / dup —— 查重</div>
+        <div>usage —— 日志分析</div>
+        <div>bump —— 版本升级</div>
+      </div>
+      <div style="margin-top:14px;background:#f2efe8;border:1px solid #d8d0c2;border-radius:6px;padding:10px 12px;">
+        <div style="font-size:12px;color:#6f675a;margin-bottom:6px;">一键执行（复制即用）</div>
+        <div style="font-family:Consolas,'Courier New',monospace;font-size:12px;color:#2e7d6b;word-break:break-all;">npx --yes github:OahMoza/skill-atelier#v0.1.0 validate --skill ./my-skill</div>
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:#6f675a;line-height:1.8;border-top:1px solid #d8d0c2;padding-top:8px;">八条原则：从证据出发 / 一技能一窄职责 / 可执行可测试 / 保留个人风格 / 声明触发与非目标 / 不为凑数保留资源 / 验证通过才算完成 / 用退役代替堆积。</div>
+    </div>
+  </div>
+
+  <!-- 版记 -->
+  <div style="max-width:1120px;margin:0 auto;padding:4px 24px 24px;">
+    <div style="border-top:1px solid #26221c;padding-top:8px;font-size:12px;color:#6f675a;">
+      版记 · 数据与来源：skill-atelier v0.1.0 实测状态（2026-10-03）· 规范快照 agentskills@69ef37e · 交互原型，非最终 UI。
+    </div>
+  </div>
+
+</div>
+<script>
+(function () {
+  try {
+    var STAGES = {
+      discover: { name: '1 · 发现', do: '从你的真实任务、工作记录、项目文件和使用日志中，识别值得固化成技能的能力候选，并判断新建 / 并入 / 暂不创建。', sub: '子技能：atelier-discover', tools: '工具：detect_duplicates.py（新建前查重）、analyze_skill_usage.py（有日志时佐证）', out: '产出：候选评估报告（证据驱动，不凭印象）' },
+      design: { name: '2 · 设计', do: '写设计文档：精确能力边界、非目标、输入输出契约、权限与依赖、触发条件、失败行为、验收标准。不创建任何文件。', sub: '子技能：atelier-design', tools: '参考：skill-design-principles.md', out: '产出：设计文档（验收标准必须可测）' },
+      build: { name: '3 · 制造', do: '把设计变成可运行产物：生成规范骨架、写入 SKILL.md 与脚本/参考/资源、实际运行验证脚本、安装到技能目录。', sub: '子技能：atelier-build', tools: '工具：scaffold_skill.py；模板：workflow / tool / governance', out: '产出：可运行的技能目录（脚本必须跑过才算数）' },
+      validate: { name: '4 · 验证', do: '把关发布：frontmatter、结构、文件引用、权限与安全、查重、触发描述质量。Error 必须清零。', sub: '子技能：atelier-validate', tools: '工具：validate_skill.py、detect_duplicates.py；参考：trigger-optimization.md', out: '产出：校验报告（Warning 要么处理，要么记录理由）' },
+      maintain: { name: '5 · 维护', do: '用使用日志定位失败率与纠正率，把每次纠正写进 Gotchas，修订指令与触发描述，升级版本并保留变更理由。', sub: '子技能：atelier-maintain', tools: '工具：analyze_skill_usage.py、bump_version.py', out: '产出：新版本 + CHANGELOG（改完用真实任务重测再 bump）' },
+      deprecate: { name: '6 · 退役', do: '判定低效、重复、过时的技能：长期不用、被完全替代、或不再匹配工作流。标记 deprecated、迁移依赖、合并或归档。', sub: '子技能：atelier-deprecate', tools: '工具：analyze_skill_usage.py（staleness 判定）', out: '产出：处置报告（先迁移后标记，不确定时选归档而非删除）' }
+    };
+    var dTitle = document.getElementById('d-title'), dDo = document.getElementById('d-do'), dSub = document.getElementById('d-sub'), dTools = document.getElementById('d-tools'), dOut = document.getElementById('d-out');
+    if (!dTitle) return;
+    function render(k) {
+      var s = STAGES[k]; if (!s) return;
+      dTitle.textContent = s.name; dDo.textContent = '做什么：' + s.do; dSub.textContent = s.sub; dTools.textContent = s.tools; dOut.textContent = s.out;
+      for (var i = 1; i <= 6; i++) {
+        var el = document.getElementById('st-' + i); if (!el) continue;
+        var on = el.getAttribute('data-k') === k;
+        el.style.borderLeftColor = on ? '#2e7d6b' : '#d8d0c2';
+        el.style.background = on ? '#e9f1ee' : '#ffffff';
+      }
+    }
+    for (var i = 1; i <= 6; i++) {
+      (function (idx) {
+        var el = document.getElementById('st-' + idx); if (!el) return;
+        el.addEventListener('click', function () { render(el.getAttribute('data-k')); });
+      })(i);
+    }
+    render('discover');
+  } catch (e) {
+    var d = document.getElementById('d-title');
+    if (d) d.textContent = '六阶段：发现 → 设计 → 制造 → 验证 → 维护 → 退役。交互不可用时静态结构仍完整。';
+  }
+})();
+</script>
+</html>
