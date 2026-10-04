@@ -39,6 +39,7 @@ skill-atelier/
     ├── atelier-build/
     ├── atelier-validate/
     ├── atelier-maintain/
+    ├── atelier-audit/
     └── atelier-deprecate/
 ```
 

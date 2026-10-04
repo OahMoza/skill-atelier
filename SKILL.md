@@ -68,6 +68,9 @@ version: 0.1.0
 - 迁移依赖它的流程到替代技能；
 - 合并重叠技能，删除死技能（删除前按 `profile.yml` 的 `require_confirmation_for` 确认）。
 
+### 横向治理 · 审计（Audit）→ `skills/atelier-audit`
+`/atelier audit` 是**全库层面**的体检（查重、批量校验、触发冲突、使用健康度、反模式），不属于单个阶段。至少每月一次或技能数明显增长时执行；方法论见 `references/lifecycle-management.md` §6，产出处置清单落到 `drafts/`。
+
 ## 交互命令
 
 | 命令 | 作用 |
@@ -78,7 +81,7 @@ version: 0.1.0
 | `/atelier validate <skill 路径>` | 检查规范、路由、文件、脚本与安全风险 |
 | `/atelier improve <skill 路径>` | 根据使用反馈优化既有 Skill |
 | `/atelier deprecate <skill 路径>` | 判断并安全移除或合并 Skill |
-| `/atelier audit` | 检查整个个人技能库的职责重叠、失效与低价值项 |
+| `/atelier audit` | 审计整库：查重、批量校验、触发冲突、健康度（→ skills/atelier-audit） |
 
 ## 个人化
 
@@ -100,6 +103,7 @@ version: 0.1.0
 | 设计新技能的边界与结构 | `references/skill-design-principles.md` |
 | 描述互相抢触发、触发不准 | `references/trigger-optimization.md` |
 | 维护/审计整个技能组合 | `references/lifecycle-management.md` |
+| 全库审计（/atelier audit） | `skills/atelier-audit`（方法论见 `references/lifecycle-management.md` §6） |
 | 决定个人化配置字段 | `references/personal-context-template.md` |
 | 判断什么不该做 | `references/anti-patterns.md` |
 | 生成骨架 | `scripts/scaffold_skill.py` |
